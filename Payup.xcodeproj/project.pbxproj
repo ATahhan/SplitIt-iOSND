@@ -7,21 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004A37F6DABA88786C5076F0 /* Pods_Payup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFF5DA55B7102DF9372F47D /* Pods_Payup.framework */; };
 		D67A2C1121B3116F00873DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A2C1021B3116F00873DE6 /* AppDelegate.swift */; };
-		D67A2C1321B3116F00873DE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A2C1221B3116F00873DE6 /* ViewController.swift */; };
-		D67A2C1621B3116F00873DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67A2C1421B3116F00873DE6 /* Main.storyboard */; };
-		D67A2C1821B3117100873DE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D67A2C1721B3117100873DE6 /* Assets.xcassets */; };
-		D67A2C1B21B3117100873DE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D67A2C1921B3117100873DE6 /* LaunchScreen.storyboard */; };
+		D67A2C2321B311DE00873DE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D67A2C2221B311DE00873DE6 /* GoogleService-Info.plist */; };
+		D695C1B621B3FECA0019FA6C /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1B521B3FECA0019FA6C /* BalanceVC.swift */; };
+		D695C1B921B3FF6B0019FA6C /* TransactionTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1B821B3FF6B0019FA6C /* TransactionTVC.swift */; };
+		D695C1BB21B3FF920019FA6C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1BA21B3FF920019FA6C /* Transaction.swift */; };
+		D695C1BD21B3FFB00019FA6C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1BC21B3FFB00019FA6C /* User.swift */; };
+		D695C1BF21B40C290019FA6C /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1BE21B40C290019FA6C /* Firebase.swift */; };
+		D69F2D4021B31C73001BC7DB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D3F21B31C73001BC7DB /* LoginVC.swift */; };
+		D69F2D4421B31D72001BC7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69F2D4321B31D72001BC7DB /* Main.storyboard */; };
+		D69F2D4621B31DA7001BC7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69F2D4521B31DA7001BC7DB /* Assets.xcassets */; };
+		D69F2D4921B32074001BC7DB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D4821B32074001BC7DB /* API.swift */; };
+		D69F2D4B21B320A7001BC7DB /* References.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D4A21B320A7001BC7DB /* References.swift */; };
+		D69F2D5221B32556001BC7DB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D5121B32556001BC7DB /* Extensions.swift */; };
+		D69F2D5521B3260E001BC7DB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D5421B3260E001BC7DB /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BFF5DA55B7102DF9372F47D /* Pods_Payup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Payup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41F5F0B6B54BBB478780301 /* Pods-Payup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Payup/Pods-Payup.release.xcconfig"; sourceTree = "<group>"; };
+		CD20898B7B77BC54BE7073D4 /* Pods-Payup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Payup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Payup/Pods-Payup.debug.xcconfig"; sourceTree = "<group>"; };
 		D67A2C0D21B3116F00873DE6 /* Payup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67A2C1021B3116F00873DE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D67A2C1221B3116F00873DE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D67A2C1521B3116F00873DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D67A2C1721B3117100873DE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D67A2C1A21B3117100873DE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D67A2C1C21B3117100873DE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D67A2C2221B311DE00873DE6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D695C1B521B3FECA0019FA6C /* BalanceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceVC.swift; sourceTree = "<group>"; };
+		D695C1B821B3FF6B0019FA6C /* TransactionTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTVC.swift; sourceTree = "<group>"; };
+		D695C1BA21B3FF920019FA6C /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		D695C1BC21B3FFB00019FA6C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D695C1BE21B40C290019FA6C /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		D69F2D3F21B31C73001BC7DB /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Payup/Controller/LoginVC.swift; sourceTree = SOURCE_ROOT; };
+		D69F2D4221B31D66001BC7DB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = /Users/ammaraltahhan/Documents/Xcode/Payup/Payup/LaunchScreen.storyboard; sourceTree = "<absolute>"; };
+		D69F2D4321B31D72001BC7DB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D69F2D4521B31DA7001BC7DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D69F2D4821B32074001BC7DB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D69F2D4A21B320A7001BC7DB /* References.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = References.swift; sourceTree = "<group>"; };
+		D69F2D5121B32556001BC7DB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D69F2D5421B3260E001BC7DB /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				004A37F6DABA88786C5076F0 /* Pods_Payup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FF96151A2E84D5F1EA5AC9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BFF5DA55B7102DF9372F47D /* Pods_Payup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9E3BE44B8C728F10FB2789F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD20898B7B77BC54BE7073D4 /* Pods-Payup.debug.xcconfig */,
+				A41F5F0B6B54BBB478780301 /* Pods-Payup.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D67A2C0421B3116F00873DE6 = {
 			isa = PBXGroup;
 			children = (
 				D67A2C0F21B3116F00873DE6 /* Payup */,
 				D67A2C0E21B3116F00873DE6 /* Products */,
+				B9E3BE44B8C728F10FB2789F /* Pods */,
+				0FF96151A2E84D5F1EA5AC9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +97,81 @@
 		D67A2C0F21B3116F00873DE6 /* Payup */ = {
 			isa = PBXGroup;
 			children = (
+				D69F2D5321B32559001BC7DB /* Configurations */,
+				D69F2D3D21B31862001BC7DB /* Model */,
+				D695C1B421B3FC7B0019FA6C /* View */,
+				D695C1B321B3FC710019FA6C /* Controller */,
 				D67A2C1021B3116F00873DE6 /* AppDelegate.swift */,
-				D67A2C1221B3116F00873DE6 /* ViewController.swift */,
-				D67A2C1421B3116F00873DE6 /* Main.storyboard */,
-				D67A2C1721B3117100873DE6 /* Assets.xcassets */,
-				D67A2C1921B3117100873DE6 /* LaunchScreen.storyboard */,
+				D69F2D4521B31DA7001BC7DB /* Assets.xcassets */,
+				D69F2D4221B31D66001BC7DB /* LaunchScreen.storyboard */,
+				D69F2D4321B31D72001BC7DB /* Main.storyboard */,
 				D67A2C1C21B3117100873DE6 /* Info.plist */,
+				D67A2C2221B311DE00873DE6 /* GoogleService-Info.plist */,
 			);
 			path = Payup;
+			sourceTree = "<group>";
+		};
+		D695C1B321B3FC710019FA6C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D69F2D3F21B31C73001BC7DB /* LoginVC.swift */,
+				D695C1B521B3FECA0019FA6C /* BalanceVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D695C1B421B3FC7B0019FA6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D695C1B721B3FF540019FA6C /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D695C1B721B3FF540019FA6C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D695C1B821B3FF6B0019FA6C /* TransactionTVC.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D69F2D3D21B31862001BC7DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D69F2D4721B32068001BC7DB /* Networking */,
+				D695C1BA21B3FF920019FA6C /* Transaction.swift */,
+				D695C1BC21B3FFB00019FA6C /* User.swift */,
+				D695C1BE21B40C290019FA6C /* Firebase.swift */,
+			);
+			name = Model;
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		D69F2D4721B32068001BC7DB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D69F2D4821B32074001BC7DB /* API.swift */,
+				D69F2D4A21B320A7001BC7DB /* References.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D69F2D4C21B324C7001BC7DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D69F2D5121B32556001BC7DB /* Extensions.swift */,
+				D69F2D5421B3260E001BC7DB /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D69F2D5321B32559001BC7DB /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				D69F2D4C21B324C7001BC7DB /* Extensions */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D67A2C1F21B3117100873DE6 /* Build configuration list for PBXNativeTarget "Payup" */;
 			buildPhases = (
+				155F01C377E91ACCF3D2CC3C /* [CP] Check Pods Manifest.lock */,
 				D67A2C0921B3116F00873DE6 /* Sources */,
 				D67A2C0A21B3116F00873DE6 /* Frameworks */,
 				D67A2C0B21B3116F00873DE6 /* Resources */,
+				348587ADD92A63E255B4ACD9 /* [CP] Embed Pods Frameworks */,
+				9DA629EB546D6441034A7C2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,44 +235,108 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D67A2C1B21B3117100873DE6 /* LaunchScreen.storyboard in Resources */,
-				D67A2C1821B3117100873DE6 /* Assets.xcassets in Resources */,
-				D67A2C1621B3116F00873DE6 /* Main.storyboard in Resources */,
+				D67A2C2321B311DE00873DE6 /* GoogleService-Info.plist in Resources */,
+				D69F2D4621B31DA7001BC7DB /* Assets.xcassets in Resources */,
+				D69F2D4421B31D72001BC7DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		155F01C377E91ACCF3D2CC3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Payup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		348587ADD92A63E255B4ACD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Payup/Pods-Payup-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Payup/Pods-Payup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DA629EB546D6441034A7C2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Payup/Pods-Payup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D67A2C0921B3116F00873DE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D67A2C1321B3116F00873DE6 /* ViewController.swift in Sources */,
+				D695C1B621B3FECA0019FA6C /* BalanceVC.swift in Sources */,
+				D69F2D5221B32556001BC7DB /* Extensions.swift in Sources */,
+				D695C1B921B3FF6B0019FA6C /* TransactionTVC.swift in Sources */,
+				D69F2D4B21B320A7001BC7DB /* References.swift in Sources */,
+				D69F2D4021B31C73001BC7DB /* LoginVC.swift in Sources */,
+				D69F2D4921B32074001BC7DB /* API.swift in Sources */,
 				D67A2C1121B3116F00873DE6 /* AppDelegate.swift in Sources */,
+				D695C1BF21B40C290019FA6C /* Firebase.swift in Sources */,
+				D69F2D5521B3260E001BC7DB /* Color.swift in Sources */,
+				D695C1BD21B3FFB00019FA6C /* User.swift in Sources */,
+				D695C1BB21B3FF920019FA6C /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D67A2C1421B3116F00873DE6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D67A2C1521B3116F00873DE6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D67A2C1921B3117100873DE6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D67A2C1A21B3117100873DE6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D67A2C1D21B3117100873DE6 /* Debug */ = {
@@ -280,11 +457,14 @@
 		};
 		D67A2C2021B3117100873DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD20898B7B77BC54BE7073D4 /* Pods-Payup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8UCDP9M4Y;
 				INFOPLIST_FILE = Payup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,17 +472,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AmmarAlTahhan.Payup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D67A2C2121B3117100873DE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41F5F0B6B54BBB478780301 /* Pods-Payup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8UCDP9M4Y;
 				INFOPLIST_FILE = Payup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AmmarAlTahhan.Payup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
