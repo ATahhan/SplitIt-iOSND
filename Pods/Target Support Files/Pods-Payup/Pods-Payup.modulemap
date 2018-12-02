@@ -1,0 +1,6 @@
+framework module Pods_Payup {
+  umbrella header "Pods-Payup-umbrella.h"
+
+  export *
+  module * { export * }
+}
