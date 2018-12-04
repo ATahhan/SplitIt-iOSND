@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 struct References {
-    private static let DB = Firestore.firestore()
+    static let DB = Firestore.firestore()
     static var currentUser: DocumentReference?
     static let Users = DB.collection("users")
     static let Transactions = DB.collection("transactions")

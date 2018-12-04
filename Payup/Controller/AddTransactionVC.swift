@@ -68,7 +68,11 @@ class AddTransactionVC: UIViewController {
         view.backgroundColor = UIColor.black.withAlphaComponent(0)
         containerView.alpha = 0
         containerView.transform = containerViewTransform
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissTapped(_:))))
+        let backView = UIView(frame: view.frame)
+        backView.backgroundColor = .clear
+        view.addSubview(backView)
+        view.sendSubviewToBack(backView)
+        backView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissTapped(_:))))
         
         paymentTextField.delegate = self
         userTextField.delegate = self

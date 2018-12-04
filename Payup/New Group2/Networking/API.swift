@@ -60,11 +60,11 @@ class API {
         }
     }
     
-    /// Description
+    /// Save a user to Firestore given his phoneNumber
     ///
     /// - Parameters:
-    ///   - phoneNumber: phoneNumber description
-    ///   - completion: completion description
+    ///   - phoneNumber: String
+    ///   - completion: returns error if any
     private static func saveUser(phoneNumber: String, completion: @escaping (Error?)->Void) {
         References.currentUser = References.Users.document(Auth.auth().currentUser!.uid)
         References.currentUser!.setData([
