@@ -9,6 +9,6 @@
 import Foundation
 import Firebase
 
-protocol FirebaseReferencable {
-    var reference: DocumentReference { get set }
+protocol FirebaseReferencable: Equatable {
+    var reference: DocumentReference? { get set }
 }

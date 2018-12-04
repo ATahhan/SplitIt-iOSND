@@ -10,25 +10,38 @@ import Foundation
 import Firebase
 
 struct User: FirebaseReferencable {
-    var reference: DocumentReference
-    var firstname: String
-    var lastname: String
+    var reference: DocumentReference?
+    var fullName: String
     var mobileNumber: String
+
+    public init(reference: DocumentReference?, fullName: String, mobileNumber: String) {
+        self.reference = reference
+        self.fullName = fullName
+        self.mobileNumber = mobileNumber
+    }
     
     func getDict() -> [String: Any] {
         let dict: [String: Any] = [
-            Keys.User.Firstname: firstname,
-            Keys.User.Lastname: lastname,
+            Keys.User.Fullname: fullName,
             Keys.User.MobileNumber: mobileNumber
         ]
         
         return dict
     }
-    
-//    static func getObject(from document: DocumentReference) -> Transaction {
-//        let user = User(reference: document,
-//                        firstname: document.data(),
-//                        lastname: <#T##String#>,
-//                        mobileNumber: <#T##String#>)
-//    }
 }
+
+extension User {
+    init(dict: [String: Any], firebaseReference: DocumentReference) {
+        self.fullName = dict[Keys.User.Fullname] as? String ?? ""
+        self.mobileNumber = dict[Keys.User.MobileNumber] as? String ?? ""
+        self.reference = firebaseReference
+    }
+}
+
+extension User {
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.reference == rhs.reference
+    }
+}
+
+var currentUser: User?

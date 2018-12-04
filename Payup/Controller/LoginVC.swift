@@ -12,6 +12,7 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var mobileTextFiled: UITextField!
     @IBOutlet weak var singInButton: UIButton!
+    @IBOutlet weak var overlayView: UIView!
     
     let segueIdentifier = "SignIn"
     var phoneNumber: String!
@@ -21,16 +22,16 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if let id = UserDefaults.standard.string(forKey: "CurrentUserId") as? String {
-            self.performSegue(withIdentifier: segueIdentifier, sender: nil)
-        }
+        showOverlay()
     }
     
     @IBAction func signInTapped(_ sender: UIButton) {
         guard let text = mobileTextFiled.text, !text.isEmpty else { return }
+        self.showProgressHUD()
         if !isVerified {
             phoneNumber = text
             API.authPhoneNumber(withPhoneNumber: text) { (err) in
+                self.hideProgressHUD()
                 guard err == nil else {
                     self.showMessage(title: "Error", message: "Couldn't verify provided phone number. \(String(describing: err?.localizedDescription))")
                     return
@@ -40,12 +41,33 @@ class LoginVC: UIViewController {
             }
         } else {
             API.signIn(withPhoneNumber: phoneNumber, verificationCode: text) { (err) in
+                self.hideProgressHUD()
                 guard err == nil else {
-                    self.showMessage(title: "Error", message: "Couldn't verify provided code")
+                    self.showMessage(title: "Error", message: "Couldn't verify provided code. \(err?.localizedDescription ?? "")")
                     return
                 }
                 self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
             }
+        }
+    }
+    
+    private func showOverlay() {
+        overlayView.alpha = 1
+        API.getCurrentUser { (user) in
+            guard user != nil else {
+                self.animateOverlayFadeOut()
+                return
+            }
+            currentUser = user!
+            self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
+        }
+    }
+    
+    private func animateOverlayFadeOut() {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
+            self.overlayView.alpha = 0
+        }) { (_) in
+            self.overlayView.isHidden = true
         }
     }
     
@@ -59,7 +81,6 @@ class LoginVC: UIViewController {
                 self.mobileTextFiled.alpha = 1
             })
         }
-        
         UIView.animate(withDuration: 0.7, animations: {
             self.singInButton.alpha = 0
         }) { (_) in
@@ -67,7 +88,6 @@ class LoginVC: UIViewController {
             UIView.animate(withDuration: 0.5, animations: {
                 self.singInButton.alpha = 1
             })
-            
         }
     }
 

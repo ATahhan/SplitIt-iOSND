@@ -13,7 +13,7 @@ struct References {
     private static let DB = Firestore.firestore()
     static var currentUser: DocumentReference?
     static let Users = DB.collection("users")
-    static let Transactions = DB.collection("transaction")
+    static let Transactions = DB.collection("transactions")
 }
 
 struct Keys {
@@ -21,8 +21,7 @@ struct Keys {
     static let LastUpdated = "lastUpdated"
     
     struct User {
-        static let Firstname = "firstname"
-        static let Lastname = "lastname"
+        static let Fullname = "fullName"
         static let MobileNumber = "mobileNumber"
         static let Transactions = "transactions"
     }

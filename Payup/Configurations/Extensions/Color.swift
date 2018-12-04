@@ -35,94 +35,14 @@ extension UIColor {
         return UIColor(rgb: 0xCFCFCF)
     }
     
-    class var mainRed: UIColor {
-        return UIColor(rgb: 0xC61A14)
-    }
-    
-    static var mainColor: UIColor = UIColor(rgb: 0xf45661) 
+    static var mainColor: UIColor = UIColor(rgb: 0x699CD9)
     
     class var correctGreen: UIColor {
         return UIColor(rgb: 0x32C732)
     }
     
     class var wrongRed: UIColor {
-        return mainRed
-    }
-    
-    class var moocRed: UIColor {
-        return mainRed
-    }
-    
-    class var liveBlue: UIColor {
-        return UIColor(rgb: 0x1479C6)
-    }
-    
-    class var ratingStarYellowFill: UIColor {
-        return UIColor(rgb: 0xF8EC5F)
-    }
-    
-    class var ratingStarYellowBorder: UIColor {
-        return UIColor(rgb: 0xF1E660)
-    }
-    
-    class var greenScore: UIColor {
-        return UIColor(rgb: 0xafd136)
-    }
-    
-    class var silverScore: UIColor {
-        return UIColor(rgb: 0xa6a6a6)
-    }
-    
-    class var goldScore: UIColor {
-        return UIColor(rgb: 0xB8860B)
-    }
-    
-    class var platinumScore: UIColor {
-        return UIColor(rgb: 0x6a420c)
-    }
-    
-    class var diamondScore: UIColor {
-        return UIColor(rgb: 0x730c16)
-    }
-    
-    class var vipScore: UIColor {
-        return UIColor(rgb: 0xafd136)
-    }
-    
-    class var examsContentYellow: UIColor {
-        return UIColor(rgb: 0xFFC107)
-    }
-    
-    class var assignmentsContentTurquoise: UIColor {
-        return UIColor(rgb: 0x00BCD4)
-    }
-    
-    class var virtualContentCyan: UIColor {
-        return UIColor(rgb: 0x00BCD4)
-    }
-    
-    class var materialContentOrange: UIColor {
-        return UIColor(rgb: 0xFF9800)
-    }
-    
-    class var videosContentLightGreen: UIColor {
-        return UIColor(rgb: 0xFF9800)
-    }
-    
-    class var youtubeContentRed: UIColor {
-        return UIColor(rgb: 0xFF0601)
-    }
-    
-    class var vimeoContentBlue: UIColor {
-        return UIColor(rgb: 0x00ADEF)
-    }
-    
-    class var documentContentOrange: UIColor {
-        return materialContentOrange
-    }
-    
-    class var imagesContentGreen: UIColor {
-        return UIColor(rgb: 0x7FC400)
+        return UIColor(rgb: 0xC65D14)
     }
     
     convenience init(red: Int, green: Int, blue: Int) {

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-//import MBProgressHUD
+import MBProgressHUD
 
 
 extension Dictionary {
@@ -20,13 +20,13 @@ extension Dictionary {
 }
 
 extension UIViewController {
-//    func showProgressHUD() {
-//        MBProgressHUD.showAdded(to: self.view, animated: true)
-//    }
-//
-//    func hideProgressHUD() {
-//        MBProgressHUD.hide(for: self.view, animated: true)
-//    }
+    func showProgressHUD() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+    }
+
+    func hideProgressHUD() {
+        MBProgressHUD.hide(for: self.view, animated: true)
+    }
     
     func showMessage(title: String, message: String, completion: (()->Void)? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -272,6 +272,23 @@ extension UIView {
         }
         getSubview(view: self)
         return all
+    }
+}
+
+extension UIResponder {
+    
+    private struct Static {
+        static weak var responder: UIResponder?
+    }
+    
+    public static func currentFirst() -> UIResponder? {
+        Static.responder = nil
+        UIApplication.shared.sendAction(#selector(UIResponder._trap), to: nil, from: nil, for: nil)
+        return Static.responder
+    }
+    
+    @objc private func _trap() {
+        Static.responder = self
     }
 }
 

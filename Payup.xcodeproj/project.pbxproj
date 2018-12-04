@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		004A37F6DABA88786C5076F0 /* Pods_Payup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFF5DA55B7102DF9372F47D /* Pods_Payup.framework */; };
+		D677198F21B7146F0002FD91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69F2D4221B31D66001BC7DB /* LaunchScreen.storyboard */; };
 		D67A2C1121B3116F00873DE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A2C1021B3116F00873DE6 /* AppDelegate.swift */; };
 		D67A2C2321B311DE00873DE6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D67A2C2221B311DE00873DE6 /* GoogleService-Info.plist */; };
 		D695C1B621B3FECA0019FA6C /* BalanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1B521B3FECA0019FA6C /* BalanceVC.swift */; };
@@ -15,6 +16,7 @@
 		D695C1BB21B3FF920019FA6C /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1BA21B3FF920019FA6C /* Transaction.swift */; };
 		D695C1BD21B3FFB00019FA6C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1BC21B3FFB00019FA6C /* User.swift */; };
 		D695C1BF21B40C290019FA6C /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1BE21B40C290019FA6C /* Firebase.swift */; };
+		D695C1E121B55B4E0019FA6C /* AddTransactionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D695C1E021B55B4D0019FA6C /* AddTransactionVC.swift */; };
 		D69F2D4021B31C73001BC7DB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D3F21B31C73001BC7DB /* LoginVC.swift */; };
 		D69F2D4421B31D72001BC7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D69F2D4321B31D72001BC7DB /* Main.storyboard */; };
 		D69F2D4621B31DA7001BC7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69F2D4521B31DA7001BC7DB /* Assets.xcassets */; };
@@ -22,6 +24,9 @@
 		D69F2D4B21B320A7001BC7DB /* References.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D4A21B320A7001BC7DB /* References.swift */; };
 		D69F2D5221B32556001BC7DB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D5121B32556001BC7DB /* Extensions.swift */; };
 		D69F2D5521B3260E001BC7DB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F2D5421B3260E001BC7DB /* Color.swift */; };
+		D6E555AF21B6B20E007134A8 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E555AE21B6B20E007134A8 /* MainButton.swift */; };
+		D6E555B121B6B2E3007134A8 /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E555B021B6B2E3007134A8 /* CurveView.swift */; };
+		D6E555B321B6B996007134A8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E555B221B6B996007134A8 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,7 @@
 		D695C1BA21B3FF920019FA6C /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		D695C1BC21B3FFB00019FA6C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D695C1BE21B40C290019FA6C /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		D695C1E021B55B4D0019FA6C /* AddTransactionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionVC.swift; sourceTree = "<group>"; };
 		D69F2D3F21B31C73001BC7DB /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = Payup/Controller/LoginVC.swift; sourceTree = SOURCE_ROOT; };
 		D69F2D4221B31D66001BC7DB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = /Users/ammaraltahhan/Documents/Xcode/Payup/Payup/LaunchScreen.storyboard; sourceTree = "<absolute>"; };
 		D69F2D4321B31D72001BC7DB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +51,9 @@
 		D69F2D4A21B320A7001BC7DB /* References.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = References.swift; sourceTree = "<group>"; };
 		D69F2D5121B32556001BC7DB /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D69F2D5421B3260E001BC7DB /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D6E555AE21B6B20E007134A8 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		D6E555B021B6B2E3007134A8 /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
+		D6E555B221B6B996007134A8 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +125,7 @@
 			children = (
 				D69F2D3F21B31C73001BC7DB /* LoginVC.swift */,
 				D695C1B521B3FECA0019FA6C /* BalanceVC.swift */,
+				D695C1E021B55B4D0019FA6C /* AddTransactionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				D695C1B721B3FF540019FA6C /* Cell */,
+				D6E555AE21B6B20E007134A8 /* MainButton.swift */,
+				D6E555B021B6B2E3007134A8 /* CurveView.swift */,
+				D6E555B221B6B996007134A8 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D677198F21B7146F0002FD91 /* LaunchScreen.storyboard in Resources */,
 				D67A2C2321B311DE00873DE6 /* GoogleService-Info.plist in Resources */,
 				D69F2D4621B31DA7001BC7DB /* Assets.xcassets in Resources */,
 				D69F2D4421B31D72001BC7DB /* Main.storyboard in Resources */,
@@ -272,6 +286,8 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -286,6 +302,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -324,6 +342,7 @@
 			files = (
 				D695C1B621B3FECA0019FA6C /* BalanceVC.swift in Sources */,
 				D69F2D5221B32556001BC7DB /* Extensions.swift in Sources */,
+				D6E555B321B6B996007134A8 /* GradientView.swift in Sources */,
 				D695C1B921B3FF6B0019FA6C /* TransactionTVC.swift in Sources */,
 				D69F2D4B21B320A7001BC7DB /* References.swift in Sources */,
 				D69F2D4021B31C73001BC7DB /* LoginVC.swift in Sources */,
@@ -331,7 +350,10 @@
 				D67A2C1121B3116F00873DE6 /* AppDelegate.swift in Sources */,
 				D695C1BF21B40C290019FA6C /* Firebase.swift in Sources */,
 				D69F2D5521B3260E001BC7DB /* Color.swift in Sources */,
+				D695C1E121B55B4E0019FA6C /* AddTransactionVC.swift in Sources */,
+				D6E555B121B6B2E3007134A8 /* CurveView.swift in Sources */,
 				D695C1BD21B3FFB00019FA6C /* User.swift in Sources */,
+				D6E555AF21B6B20E007134A8 /* MainButton.swift in Sources */,
 				D695C1BB21B3FF920019FA6C /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
