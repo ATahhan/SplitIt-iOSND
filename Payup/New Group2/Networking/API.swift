@@ -60,6 +60,19 @@ class API {
         }
     }
     
+    /// Logout from current Firebase session
+    ///
+    /// - Parameter completion: returns error if any
+    static func logout(completion: @escaping (Error?)->Void) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            completion(error)
+            return
+        }
+        completion(nil)
+    }
+    
     /// Save a user to Firestore given his phoneNumber
     ///
     /// - Parameters:

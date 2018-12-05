@@ -26,6 +26,12 @@ class LoginVC: UIViewController {
         showOverlay()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupUI()
+    }
+    
     @IBAction func signInTapped(_ sender: UIButton) {
         guard let text = mobileTextFiled.text, !text.isEmpty else { mobileTextFiled.animateFalseEntry(); return }
         self.showProgressHUD()
@@ -53,6 +59,15 @@ class LoginVC: UIViewController {
         }
     }
     
+    private func setupUI() {
+        isVerified = false
+        fullNameTextFiled.alpha = 0
+        fullNameTextFiled.isHidden = true
+        mobileTextFiled.placeholder = "+9665xxxxxxxx"
+        mobileTextFiled.text = ""
+        fullNameTextFiled.text = ""
+    }
+    
     private func showOverlay() {
         overlayView.alpha = 1
         API.getCurrentUser { (user) in
@@ -62,6 +77,7 @@ class LoginVC: UIViewController {
             }
             currentUser = user!
             self.performSegue(withIdentifier: self.segueIdentifier, sender: nil)
+            self.animateOverlayFadeOut()
         }
     }
     
@@ -75,12 +91,14 @@ class LoginVC: UIViewController {
     
     private func animateVerificationCode() {
         mobileTextFiled.text = ""
+        fullNameTextFiled.isHidden = false
         UIView.animate(withDuration: 0.7, animations: {
             self.mobileTextFiled.alpha = 0
         }) { (_) in
             self.mobileTextFiled.placeholder = "Verification Code"
             UIView.animate(withDuration: 0.5, animations: {
                 self.mobileTextFiled.alpha = 1
+                self.fullNameTextFiled.alpha = 1
             })
         }
         UIView.animate(withDuration: 0.7, animations: {

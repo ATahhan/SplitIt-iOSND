@@ -49,10 +49,29 @@ class BalanceVC: UIViewController {
         getTransactions()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Dynamic sizing for the header view
+        if let headerView = tableView.tableHeaderView {
+            let height = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+            var headerFrame = headerView.frame
+            
+            // If we don't have this check, viewDidLayoutSubviews() will get
+            // repeatedly, causing the app to hang.
+            if height != headerFrame.size.height {
+                headerFrame.size.height = height
+                headerView.frame = headerFrame
+                tableView.tableHeaderView = headerView
+            }
+        }
+    }
+    
     private func setupUI() {
         expandDetailedBalance(false)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.addTapped(_:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logoutTapped(_:)))
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -61,6 +80,18 @@ class BalanceVC: UIViewController {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.whiteContent]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    @objc private func logoutTapped(_ sender: Any) {
+        let alert = UIAlertController(title: "Logging out", message: "Are you sure you want to logout?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: { (action) in
+            API.logout(completion: { (err) in
+                guard err == nil else { self.showMessage(title: "Error", message: "Couldn't log you out. \(err!.localizedDescription)"); return }
+                self.dismiss(animated: true, completion: nil)
+            })
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     @objc private func addTapped(_ sender: Any) {
@@ -115,6 +146,7 @@ class BalanceVC: UIViewController {
     
     private func expandDetailedBalance(_ bool: Bool) {
         if bool {
+            
             self.detailedBalanceStackView.isHidden = false
             UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.01, options: .curveEaseOut, animations: {
                 self.balanceViewHeight.constant = self.expandedBalanceHeight
@@ -122,6 +154,7 @@ class BalanceVC: UIViewController {
             })
             UIView.animate(withDuration: 0.6, delay: 0.7, usingSpringWithDamping: 1, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
                 self.detailedBalanceStackView.alpha = 1
+//                self.tableView.reloadData()
             })
         } else {
             UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
@@ -131,6 +164,7 @@ class BalanceVC: UIViewController {
                 self.balanceViewHeight.constant = self.collapsedBalanceHeight
                 self.view.layoutIfNeeded()
                 self.detailedBalanceStackView.isHidden = true
+//                self.tableView.reloadData()
             })
         }
         
@@ -151,7 +185,6 @@ extension BalanceVC: UITableViewDelegate, UITableViewDataSource {
         } else {
             cell.transaction = (transaction, Payment.againstUser)
         }
-        
         
         return cell
     }
