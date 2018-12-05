@@ -323,7 +323,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past splits:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yh-Hq-t4r">
                                                     <rect key="frame" x="12" y="242" width="327" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.19452545855733416" green="0.32480990656321596" blue="0.4747699058219178" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" red="0.19607843137254902" green="0.32549019607843138" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -506,6 +506,7 @@
                         <outlet property="detailedBalanceStackView" destination="qnE-c9-lCd" id="mjR-Cb-KMa"/>
                         <outlet property="expandBalanceButton" destination="QxK-GF-f9w" id="xqP-RI-FR6"/>
                         <outlet property="forBalanceAmountLabel" destination="Gip-S8-jFl" id="XUT-CF-gK3"/>
+                        <outlet property="pastSplitsLabel" destination="6yh-Hq-t4r" id="Acc-q8-Jum"/>
                         <outlet property="tableView" destination="U4C-T9-ldJ" id="tuO-Xy-rT5"/>
                     </connections>
                 </viewController>

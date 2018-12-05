@@ -37,6 +37,10 @@ extension UIColor {
     
     static var mainColor: UIColor = UIColor(rgb: 0x699CD9)
     
+    class var darkMainColor: UIColor {
+        return UIColor(rgb: 0x325379)
+    }
+    
     class var correctGreen: UIColor {
         return UIColor(rgb: 0x32C732)
     }

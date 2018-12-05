@@ -10,8 +10,9 @@ import UIKit
 
 class CurveView: UIView {
     
+    lazy var path = createBezierPath()
+    
     override func draw(_ rect: CGRect) {
-        let path = createBezierPath()
         
         let fillColor = UIColor.mainColor
         fillColor.setFill()

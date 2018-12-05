@@ -15,7 +15,7 @@ class BalanceVC: UIViewController {
     @IBOutlet weak var forBalanceAmountLabel: UILabel!
     @IBOutlet weak var againstBalanceAmountLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var pastSplitsLabel: UILabel!
     @IBOutlet weak var expandBalanceButton: UIButton!
     @IBOutlet weak var detailedBalanceStackView: UIStackView!
     @IBOutlet weak var balanceViewHeight: NSLayoutConstraint!
@@ -52,13 +52,9 @@ class BalanceVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        // Dynamic sizing for the header view
         if let headerView = tableView.tableHeaderView {
             let height = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
             var headerFrame = headerView.frame
-            
-            // If we don't have this check, viewDidLayoutSubviews() will get
-            // repeatedly, causing the app to hang.
             if height != headerFrame.size.height {
                 headerFrame.size.height = height
                 headerView.frame = headerFrame
@@ -146,7 +142,6 @@ class BalanceVC: UIViewController {
     
     private func expandDetailedBalance(_ bool: Bool) {
         if bool {
-            
             self.detailedBalanceStackView.isHidden = false
             UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.01, options: .curveEaseOut, animations: {
                 self.balanceViewHeight.constant = self.expandedBalanceHeight
@@ -154,7 +149,6 @@ class BalanceVC: UIViewController {
             })
             UIView.animate(withDuration: 0.6, delay: 0.7, usingSpringWithDamping: 1, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
                 self.detailedBalanceStackView.alpha = 1
-//                self.tableView.reloadData()
             })
         } else {
             UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
@@ -164,10 +158,8 @@ class BalanceVC: UIViewController {
                 self.balanceViewHeight.constant = self.collapsedBalanceHeight
                 self.view.layoutIfNeeded()
                 self.detailedBalanceStackView.isHidden = true
-//                self.tableView.reloadData()
             })
         }
-        
     }
 
 }
@@ -187,5 +179,15 @@ extension BalanceVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+extension BalanceVC: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y > 55 {
+            pastSplitsLabel.textColor = .whiteContent
+        } else {
+            pastSplitsLabel.textColor = .darkMainColor
+        }
     }
 }
