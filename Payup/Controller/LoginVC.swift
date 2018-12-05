@@ -10,6 +10,7 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    @IBOutlet weak var fullNameTextFiled: UITextField!
     @IBOutlet weak var mobileTextFiled: UITextField!
     @IBOutlet weak var singInButton: UIButton!
     @IBOutlet weak var overlayView: UIView!
@@ -26,7 +27,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func signInTapped(_ sender: UIButton) {
-        guard let text = mobileTextFiled.text, !text.isEmpty else { return }
+        guard let text = mobileTextFiled.text, !text.isEmpty else { mobileTextFiled.animateFalseEntry(); return }
         self.showProgressHUD()
         if !isVerified {
             phoneNumber = text
@@ -40,7 +41,8 @@ class LoginVC: UIViewController {
                 self.isVerified = true
             }
         } else {
-            API.signIn(withPhoneNumber: phoneNumber, verificationCode: text) { (err) in
+            guard let name = fullNameTextFiled.text, !text.isEmpty else { fullNameTextFiled.animateFalseEntry(); return }
+            API.signIn(withPhoneNumber: phoneNumber, fullName: name, verificationCode: text) { (err) in
                 self.hideProgressHUD()
                 guard err == nil else {
                     self.showMessage(title: "Error", message: "Couldn't verify provided code. \(err?.localizedDescription ?? "")")

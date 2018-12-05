@@ -43,7 +43,7 @@ class API {
     ///   - withPhoneNumber: phone number used to sign in
     ///   - code: verification code sent to the user
     ///   - completion: Error - Sign in error
-    static func signIn(withPhoneNumber number: String, verificationCode code: String, completion: @escaping (Error?)->Void) {
+    static func signIn(withPhoneNumber number: String, fullName: String, verificationCode code: String, completion: @escaping (Error?)->Void) {
         let verificationID = UserDefaults.standard.string(forKey: "verificationID")!
         let credintials = PhoneAuthProvider.provider().credential(
             withVerificationID: verificationID,
@@ -53,7 +53,7 @@ class API {
                 completion(error)
                 return
             }
-            saveUser(phoneNumber: number, completion: { (err) in
+            saveUser(phoneNumber: number, fullName: fullName, completion: { (err) in
                 guard err == nil else { completion(err!); return }
                 completion(nil)
             })
@@ -65,12 +65,12 @@ class API {
     /// - Parameters:
     ///   - phoneNumber: String
     ///   - completion: returns error if any
-    private static func saveUser(phoneNumber: String, completion: @escaping (Error?)->Void) {
+    private static func saveUser(phoneNumber: String, fullName: String, completion: @escaping (Error?)->Void) {
         References.currentUser = References.Users.document(Auth.auth().currentUser!.uid)
         References.currentUser!.setData([
             Keys.Created: FieldValue.serverTimestamp(),
             Keys.LastUpdated: FieldValue.serverTimestamp(),
-            Keys.User.Fullname: "",
+            Keys.User.Fullname: fullName,
             Keys.User.MobileNumber: phoneNumber
         ], completion: { (err) in
             if let err = err {
